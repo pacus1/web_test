@@ -38,10 +38,6 @@ public class SecurityFilter implements Filter {
 		
 		securityService.
 		setCurrentUser(user);
-		
-		System.out.println("Thread name: " + Thread.currentThread().getName() +
-				", current user: " + (user != null ? user.getUserName() : null));
-		
 		chain.doFilter(request, response);
 		
 	}
